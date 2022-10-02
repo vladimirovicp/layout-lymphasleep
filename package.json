@@ -1,0 +1,32 @@
+{
+  "name": "layout-lymphasleep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "mini-css-extract-plugin": "^2.6.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimirovicp/layout-lymphasleep.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladimirovicp/layout-lymphasleep/issues"
+  },
+  "homepage": "https://github.com/vladimirovicp/layout-lymphasleep#readme"
+}
