@@ -1,3 +1,3 @@
 # layout-lymphasleep
 
-[https://www.youtube.com/watch?v=R9DTbDA_ZVE](https://www.youtube.com/watch?v=R9DTbDA_ZVE)
+[Webpack. Базовая сборка проекта - youtube.com](https://www.youtube.com/watch?v=R9DTbDA_ZVE)

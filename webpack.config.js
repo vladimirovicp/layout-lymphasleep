@@ -15,6 +15,7 @@ module.exports = {
     output: {
         filename: `./js/${filename('js')}`,
         path: path.resolve(__dirname, 'app'),
+        publicPath: '',
     },
     devServer: {
         historyApiFallback: true,
@@ -71,7 +72,29 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", 'sass-loader'],
+                // use: [MiniCssExtractPlugin.loader, "css-loader", 'sass-loader'],
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: (resourcePath, context) => {
+                            return path.relative(path.dirname(resourcePath), context) + '/';
+                        }
+                    }
+                }, "css-loader",
+                    'sass-loader'
+                ],
+            },
+            {
+                test: /\.(?:|gif|png|jpg|jpeg|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: `./img/${filename('[ext]')}`,
+                            publicPath: "",
+                        }
+                    }
+                ],
             },
         ]
     }
