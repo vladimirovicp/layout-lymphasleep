@@ -8,6 +8,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+const assetFilename = '[path][name][contenthash][ext]';
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -16,7 +17,9 @@ module.exports = {
     output: { // Указываем точку выхода
         path: path.resolve(__dirname, 'app'), // Тут мы указываем полный путь к директории, где будет храниться конечный файл
         filename: `./js/${filename('js')}`, // Указываем имя этого файла
-        assetModuleFilename: '[path][name][ext]',
+        // assetModuleFilename: '[path][name][ext]',
+        assetModuleFilename: assetFilename,
+        clean: true,
     },
     devServer: {
         historyApiFallback: true,
@@ -84,36 +87,18 @@ module.exports = {
             {
                 test: /\.(gif|png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
-                // loader: "file-loader",
-                // options: {
-                //     publicPath: path.resolve(__dirname, 'image'),
-                //     name(resourcePath, resourceQuery) {
-                //         if (isProd) {
-                //             return '[path][name].[ext]';
-                //         } else{
-                //             return '[path][name].[contenthash].[ext]';
-                //         }
-                //     },
-                //
-                // }
             },
+            {
+                // test: /\.(eot|ttf|woff)$/i,
+                test: /\.(woff2)$/i,
+                use:[{
+                    loader: "file-loader",
+                    options: {
+                        name: `./fonts/${filename('[ext]')}`
+                    }
+                }],
 
-            // {
-            //     test: /\.(gif|png|jpg|jpeg|svg)$/,
-            //     type: 'asset',
-            //     loader: "file-loader",
-            //     options: {
-            //         publicPath: path.resolve(__dirname, 'image'),
-            //         name(resourcePath, resourceQuery) {
-            //             if (isProd) {
-            //                 return '[path][name].[ext]';
-            //             } else{
-            //                 return '[path][name].[contenthash].[ext]';
-            //             }
-            //         },
-            //
-            //     }
-            // },
+            },
         ]
     }
 };
