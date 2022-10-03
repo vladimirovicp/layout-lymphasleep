@@ -12,16 +12,17 @@ const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: './js/main.js',
-    output: {
-        filename: `./js/${filename('js')}`,
-        path: path.resolve(__dirname, 'app'),
-        // clean: true, //очистка папки app
+    entry: './js/main.js', // Указываем входную точку
+    output: { // Указываем точку выхода
+        path: path.resolve(__dirname, 'app'), // Тут мы указываем полный путь к директории, где будет храниться конечный файл
+        filename: `./js/${filename('js')}`, // Указываем имя этого файла
+        assetModuleFilename: '[path][name][ext]',
     },
     devServer: {
         historyApiFallback: true,
         static: {
-            directory: path.resolve(__dirname, 'app'),
+            // directory: path.resolve(__dirname, 'app'),
+            directory: path.join(__dirname, 'app'),
         },
         open: true,
         compress: true,
@@ -80,8 +81,25 @@ module.exports = {
                     'sass-loader'
                 ],
             },
+            {
+                test: /\.(gif|png|jpg|jpeg|svg)$/i,
+                type: 'asset/resource',
+                // loader: "file-loader",
+                // options: {
+                //     publicPath: path.resolve(__dirname, 'image'),
+                //     name(resourcePath, resourceQuery) {
+                //         if (isProd) {
+                //             return '[path][name].[ext]';
+                //         } else{
+                //             return '[path][name].[contenthash].[ext]';
+                //         }
+                //     },
+                //
+                // }
+            },
+
             // {
-            //     test: /\.(gif|png|jpg|jpeg|svg)$/i,
+            //     test: /\.(gif|png|jpg|jpeg|svg)$/,
             //     type: 'asset',
             //     loader: "file-loader",
             //     options: {
