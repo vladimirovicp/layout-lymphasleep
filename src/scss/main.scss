@@ -1,10 +1,14 @@
 //@import "mixins";
 @import "fonts";
 @import "vendor";
+@import "set";
+
+@import "hero";
+@import "planet";
 
 
-body{
-  font-family: "Play";
-  background-color: red;
-  background-image: url("../img/hero/hero-bg.jpg");
-}
+//body{
+//  font-family: "Play";
+//  background-color: red;
+//  background-image: url("../img/hero/hero-bg.jpg");
+//}

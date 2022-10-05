@@ -1,0 +1,53 @@
+.planet{
+  .container{
+    position: relative;
+  }
+  &__anima{
+      border-radius: 50%;
+      animation: rotate 15s linear infinite;
+      box-shadow: inset .5rem .3rem 3rem 2rem rgba(0, 0, 0, 0.8), 0 .5rem 3rem .5rem #000;
+      margin: 4rem;
+      position: absolute;
+      transition-duration: 500ms;
+
+      :hover {
+        bottom: 1rem;
+        transform: scale(1.05);
+        box-shadow: inset 0 0 2.5rem 2rem rgba(0, 0, 0, 0.8),
+        0 .5rem 2rem .5rem #000;
+      }
+  }
+
+  //https://celes.club/31732-tekstura-merkurija.html
+  &__mercury{
+    width: 12rem;
+    height: 12rem;
+    //top: 15vh;
+    //left: calc((100vw / 2) - 30vw);
+    background-size: 25rem;
+    //background-image: url(../img/hero/planets/mercury.jpg);
+
+
+    background-image: url(../img/hero/planets/mercury/500-merkuriya-19.jpg);
+    //mercury
+
+  }
+}
+
+@keyframes rotate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 50rem;
+  }
+}
+
+@keyframes rotateRing {
+  0% {
+    transform: translate(-50%, -50%) rotateX(70deg) rotateY(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateX(70deg) rotateZ(360deg);
+  }
+}
