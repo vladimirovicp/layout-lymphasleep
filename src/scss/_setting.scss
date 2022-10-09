@@ -1,0 +1,24 @@
+.setting{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 10;
+
+  &__title{
+    text-align: center;
+    font-size: 2.4rem;
+    padding-bottom: 2rem;
+  }
+
+  &__link{
+    color: red;
+    padding: 2rem;
+    background-color: #e1e1e1;
+    font-size: 2rem;
+  }
+
+  &__panel{
+    position: absolute;
+    width: 50%;
+  }
+}

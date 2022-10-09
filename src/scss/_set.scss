@@ -10,9 +10,8 @@
 
 html {
     font-family: 'Play';
-    font-size: 0.625vw; // на разрешении 1600 0.625vw === 10px
+    font-size: 0.625vw;
     font-style: normal;
-    //font-weight: 400;
     font-weight: normal;
     -webkit-animation: bugfix infinite 1s;
     line-height: 1.2;
@@ -21,10 +20,7 @@ html {
 }
 
 body {
-    font-style: normal;
-    font-weight: normal;
     -webkit-animation: bugfix infinite 1s;
-    line-height: 1.2;
     margin: 0;
     padding: 0;
     color: #282828; // цвет по умолчанию текста по сайту

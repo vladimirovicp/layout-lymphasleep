@@ -1,14 +1,16 @@
 //@import "mixins";
+
+@import "mixins";
 @import "fonts";
+
 @import "vendor";
 @import "set";
 
+@import "popup";
+@import "setting";
+
+@import "footer";
+@import "footer2";
+
 @import "hero";
 @import "planet";
-
-
-//body{
-//  font-family: "Play";
-//  background-color: red;
-//  background-image: url("../img/hero/hero-bg.jpg");
-//}
