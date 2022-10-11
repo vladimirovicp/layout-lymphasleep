@@ -1,4 +1,4 @@
-.footer2{
+.footer3{
   display: none;
   background-color: #000;
   padding-top: 2rem;
@@ -12,13 +12,13 @@
   }
 
   &__sponsors{
-    svg{
-      width: 20rem;
+    &-img{
+      width: 50rem;
     }
   }
 
   &__grant{
-    padding-left: 4rem;
+    margin-left: auto;
     &-name{
       font-size: 2rem;
       padding-bottom: 1rem;
