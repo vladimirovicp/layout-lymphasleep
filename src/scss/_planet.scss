@@ -1,7 +1,4 @@
 .planet{
-  .container{
-    position: relative;
-  }
   &__anima{
       border-radius: 50%;
       animation: rotate 15s linear infinite;
@@ -10,29 +7,111 @@
       position: absolute;
       transition-duration: 500ms;
 
-      :hover {
+      &:hover {
         bottom: 1rem;
-        transform: scale(1.05);
-        box-shadow: inset 0 0 2.5rem 2rem rgba(0, 0, 0, 0.8),
-        0 .5rem 2rem .5rem #000;
+        transform: scale(1.25);
+        box-shadow: inset 0 0 2.5rem 2rem rgba(0, 0, 0, 0.8), 0 .5rem 2rem .5rem #000;
       }
+
+    //.text-up{
+    //  position: absolute;
+    //  width: 150%;
+    //  height: calc(10vh - 20px);
+    //  left: -1.8vh;
+    //  top: -23px;
+    //}
+    //.text-up span {
+    //  color: #66c3d0;
+    //  transform-origin: bottom;
+    //}
+    //.text-down{
+    //  position: absolute;
+    //  width: 150%;
+    //  height: 8vh;
+    //  left: -2.1vh;
+    //  bottom: -23px;
+    //}
+    //
+    //.text-down span {
+    //  color: #66c3d0;
+    //  transform-origin: top;
+    //  display: flex;
+    //  align-items: flex-end;
+    //}
+
   }
 
   //https://celes.club/31732-tekstura-merkurija.html
   &__mercury{
     width: 12rem;
     height: 12rem;
-    //top: 15vh;
-    //left: calc((100vw / 2) - 30vw);
+    left: 25rem;
+    top: 25rem;
     background-size: 25rem;
-    //background-image: url(../img/hero/planets/mercury.jpg);
+    background-image: url(../img/hero/planets/mercury.jpg);
 
+    &_text-up{
+           font-size: 2rem;
+           color: #66c3d0;
+           font-weight: bold;
+           position: absolute;/*абсолютное позиционирование*/
+           text-align: center;
+           pointer-events: none;/*не применять событие мыши*/
+           user-select: none;/*запрет на выбор текста*/
+           left: 50%;
+           transform: translate(0, -50%);
 
-    background-image: url(../img/hero/planets/mercury/500-merkuriya-19.jpg);
+           & span{
+             position: absolute;
+             top: -2.5rem;
+             text-transform: uppercase;
+             display: inline-block;/*отображать как блочно-строчный*/
+             transform-origin: 0 8rem;/*откуда начинать трансформацию*/
+           }
+         }
+
+        &_text-down{
+          font-size: 2rem;
+          color: #66c3d0;
+          font-weight: bold;
+          position: absolute;/*абсолютное позиционирование*/
+          text-align: center;
+          pointer-events: none;/*не применять событие мыши*/
+          user-select: none;/*запрет на выбор текста*/
+          left: 50%;
+          transform: translate(0, -50%);
+          bottom: 0;
+
+          & span{
+            position: absolute;
+            bottom: -3rem;
+            text-transform: uppercase;
+            display: inline-block;/*отображать как блочно-строчный*/
+            transform-origin: 0 -5rem;/*откуда начинать трансформацию*/
+          }
+        }
+
+    //background-image: url(../img/hero/planets/mercury/500-merkuriya-19.jpg);
     //mercury
+
+    //.text-up{
+    //  width: 140px;
+    //  height: 75px;
+    //  left: -4px;
+    //  top: -23px;
+    //}
+    //
+    //.text-down{
+    //  width: 145px;
+    //  height: 75px;
+    //  left: -8px;
+    //  bottom: -23px;
+    //}
 
   }
 }
+
+
 
 @keyframes rotate {
   0% {

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "circletype": "^2.3.0",
     "mini-css-extract-plugin": "^2.6.1",
     "normalize.css": "^8.0.1"
   },
