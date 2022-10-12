@@ -55,8 +55,6 @@
 
 }
 
-
-
 @media (max-width: 48em) {
 
   .footer{
@@ -71,25 +69,18 @@
       justify-content: center;
       margin-bottom: 7rem;
       &_logo{
-        //width: 24.7rem;
-        //height: 17rem;
-        //margin-right: 3.1rem;
+
       }
       &_text{
-        //margin-top: -1rem;
-        //font-weight: 700;
-        //font-size: 2.4rem;
-        //line-height: 150%;
-        //text-transform: uppercase;
+        font-size: 2.3rem;
         & span{
-          //display: block;
         }
       }
     }
 
     &__grant{
       &_name{
-        font-size: 3.4rem;
+        font-size: 3.3rem;
         margin-bottom: 3rem;
       }
     }
@@ -127,3 +118,13 @@
     }
   }
 }
+
+//@media (max-width: 30em) { //480
+//  .footer{
+//    &__sponsor{
+//      &_logo{
+//        margin-right: 2.3rem;
+//      }
+//    }
+//  }
+//}
