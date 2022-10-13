@@ -6,42 +6,47 @@
       margin: 4rem;
       position: absolute;
       transition-duration: 500ms;
-
       &:hover {
         bottom: 1rem;
         transform: scale(1.25);
         box-shadow: inset 0 0 2.5rem 2rem rgba(0, 0, 0, 0.8), 0 .5rem 2rem .5rem #000;
       }
+  }
 
-    //.text-up{
-    //  position: absolute;
-    //  width: 150%;
-    //  height: calc(10vh - 20px);
-    //  left: -1.8vh;
-    //  top: -23px;
-    //}
-    //.text-up span {
-    //  color: #66c3d0;
-    //  transform-origin: bottom;
-    //}
-    //.text-down{
-    //  position: absolute;
-    //  width: 150%;
-    //  height: 8vh;
-    //  left: -2.1vh;
-    //  bottom: -23px;
-    //}
-    //
-    //.text-down span {
-    //  color: #66c3d0;
-    //  transform-origin: top;
-    //  display: flex;
-    //  align-items: flex-end;
-    //}
+  &__text{
+    &-up{
+      color: #66c3d0;
+      font-size: 2rem;
+      //font-weight: bold;
+      position: absolute;/*абсолютное позиционирование*/
+      pointer-events: none;/*не применять событие мыши*/
+      left: 50%;
+      transform: translate(0, -50%);
+      & span{
+        position: absolute;
+        top: -2.5rem;
+        display: inline-block;/*отображать как блочно-строчный*/
+      }
+    }
 
+    &-down{
+      color: #66c3d0;
+      font-size: 2rem;
+      position: absolute;/*абсолютное позиционирование*/
+      pointer-events: none;/*не применять событие мыши*/
+      left: 50%;
+      transform: translate(0, -50%);
+      bottom: 0;
+      & span{
+        position: absolute;
+        bottom: -2.5rem;
+        display: inline-block;/*отображать как блочно-строчный*/
+      }
+    }
   }
 
   //https://celes.club/31732-tekstura-merkurija.html
+
   &__mercury{
     width: 12rem;
     height: 12rem;
@@ -51,64 +56,53 @@
     background-image: url(../img/hero/planets/mercury.jpg);
 
     &_text-up{
-           font-size: 2rem;
-           color: #66c3d0;
-           font-weight: bold;
-           position: absolute;/*абсолютное позиционирование*/
-           text-align: center;
-           pointer-events: none;/*не применять событие мыши*/
-           user-select: none;/*запрет на выбор текста*/
-           left: 50%;
-           transform: translate(0, -50%);
+      & span{
+        transform-origin: 0 8rem;/*откуда начинать трансформацию*/
+      }
+    }
 
-           & span{
-             position: absolute;
-             top: -2.5rem;
-             text-transform: uppercase;
-             display: inline-block;/*отображать как блочно-строчный*/
-             transform-origin: 0 8rem;/*откуда начинать трансформацию*/
-           }
-         }
-
-        &_text-down{
-          font-size: 2rem;
-          color: #66c3d0;
-          font-weight: bold;
-          position: absolute;/*абсолютное позиционирование*/
-          text-align: center;
-          pointer-events: none;/*не применять событие мыши*/
-          user-select: none;/*запрет на выбор текста*/
-          left: 50%;
-          transform: translate(0, -50%);
-          bottom: 0;
-
-          & span{
-            position: absolute;
-            bottom: -3rem;
-            text-transform: uppercase;
-            display: inline-block;/*отображать как блочно-строчный*/
-            transform-origin: 0 -5rem;/*откуда начинать трансформацию*/
-          }
-        }
-
-    //background-image: url(../img/hero/planets/mercury/500-merkuriya-19.jpg);
-    //mercury
-
-    //.text-up{
-    //  width: 140px;
-    //  height: 75px;
-    //  left: -4px;
-    //  top: -23px;
-    //}
-    //
-    //.text-down{
-    //  width: 145px;
-    //  height: 75px;
-    //  left: -8px;
-    //  bottom: -23px;
-    //}
-
+    &_text-down{
+      & span{
+        transform-origin: 0 -6rem;/*откуда начинать трансформацию*/
+      }
+    }
   }
+
+  &__saturn{
+    width: 15rem;
+    height: 15rem;
+    left: 0rem;
+    top: 30rem;
+    background-size: 25rem;
+    transform-style: preserve-3d;
+    background-image: url(../img/hero/planets/saturn.jpg);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200%;
+      height: 200%;
+      transform: translate(-50%, -50%) rotateX(
+                      90deg);
+      border-radius: 50%;
+      background-image: url("../img/hero/planets/saturn_ring.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      animation: rotateRing 4s linear infinite;
+    }
+
+    &_text-down{
+      & span{
+        transform-origin: 0 -6rem;/*откуда начинать трансформацию*/
+        bottom: -4.5rem;
+      }
+    }
+  }
+
+
 }
 
 

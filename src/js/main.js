@@ -22,20 +22,16 @@ if (hero){
         })
     }
 
-    const planetaDown = hero.querySelectorAll('.planet__anima .planeta__text-down');
+    const planetaDown = hero.querySelectorAll('.planet__anima .planet__text-down');
     if( planetaDown.length > 0){
         planetaDown.forEach( planeta => {
             planeta.innerHTML = planeta.textContent.replace(/\S/g, "<span>$&</span>");
             const el = planeta.querySelectorAll('span');
             for(let i=0; i<el.length;i++){
-                // el[i].style.transform = "rotate("+(i - (el.length -1)/2) * 27+"deg)";
-
                 el[el.length - i - 1].style.transform = "rotate("+(i - (el.length -1)/2) * 27+"deg)";
-
-                // el[i].style.transform = "rotate("+( (el.length -1)/2) + i   * 36 + "deg)";
             }
         })
-    };
+    }
 
 }
 
