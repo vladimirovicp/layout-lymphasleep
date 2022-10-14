@@ -18,4 +18,15 @@
       //object-fit: none;
     }
   }
+
+  &__title{
+    font-size: 0;
+    position: absolute;
+    width: 62rem;
+    //height: 20rem;
+    object-fit: contain;
+    top: 72rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 }

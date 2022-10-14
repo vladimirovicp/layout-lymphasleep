@@ -3,7 +3,7 @@
       border-radius: 50%;
       animation: rotate 15s linear infinite;
       box-shadow: inset .5rem .3rem 3rem 2rem rgba(0, 0, 0, 0.8), 0 .5rem 3rem .5rem #000;
-      margin: 4rem;
+      //margin: 4rem;
       position: absolute;
       transition-duration: 500ms;
       &:hover {
@@ -16,41 +16,47 @@
   &__text{
     &-up{
       color: #66c3d0;
-      font-size: 2rem;
+      font-size: 1.5rem;
       position: absolute;/*абсолютное позиционирование*/
       pointer-events: none;/*не применять событие мыши*/
       left: 50%;
+      transform: translate(-50%, 0);
       width: 150%;
-      height: 80%;
-      transform: translate(-50%, -10%);
+      height: 60%;
+      top: 0;
+      text-transform: uppercase;
 
       & span{
         position: absolute;
         top: -2.5rem;
-        display: inline-block;/*отображать как блочно-строчный*/
+        //display: inline-block;/*отображать как блочно-строчный*/
         transform-origin: bottom;
         height: 100%;
-        left: 50%;
+        //left: 50%;
+        left: calc(50% - 0.5rem);
+        display: flex;
+        align-items: flex-start;
       }
     }
 
     &-down{
       color: #66c3d0;
-      font-size: 2rem;
+      font-size: 1.5rem;
       position: absolute;/*абсолютное позиционирование*/
       pointer-events: none;/*не применять событие мыши*/
       left: 50%;
-      transform: translate(-50%, 10%);
+      transform: translate(-50%, 0);
       width: 150%;
-      height: 80%;
+      height: 60%;
       bottom: 0;
+      text-transform: uppercase;
 
       & span{
         position: absolute;
         bottom: -2.5rem;
         transform-origin: top;
-        height: 80%;
-        left: 50%;
+        height: 100%;
+        left: calc(50% - .4rem);
         display: flex;
         align-items: flex-end;
       }
@@ -60,31 +66,19 @@
   //https://celes.club/31732-tekstura-merkurija.html
 
   &__mercury{
-    width: 12rem;
-    height: 12rem;
-    left: 25rem;
-    top: 25rem;
+    width: 10rem;
+    height: 10rem;
+    left: 26rem;
+    top: 22rem;
     background-size: 25rem;
     background-image: url(../img/hero/planets/mercury.jpg);
-
-    &_text-up{
-      & span{
-        //transform-origin: 0 8rem;/*откуда начинать трансформацию*/
-      }
-    }
-
-    &_text-down{
-      & span{
-        //transform-origin: 0 -6rem;/*откуда начинать трансформацию*/
-      }
-    }
   }
 
   &__saturn{
-    width: 15rem;
-    height: 15rem;
-    left: 0rem;
-    top: 30rem;
+    width: 14rem;
+    height: 14rem;
+    left: 2rem;
+    top: 25rem;
     background-size: 25rem;
     transform-style: preserve-3d;
     background-image: url(../img/hero/planets/saturn.jpg);
@@ -96,8 +90,7 @@
       left: 50%;
       width: 200%;
       height: 200%;
-      transform: translate(-50%, -50%) rotateX(
-                      90deg);
+      transform: translate(-50%, -50%) rotateX(90deg);
       border-radius: 50%;
       background-image: url("../img/hero/planets/saturn_ring.png");
       background-position: center;
@@ -105,13 +98,63 @@
       background-size: contain;
       animation: rotateRing 4s linear infinite;
     }
+  }
 
-    &_text-down{
-      & span{
-        transform-origin: 0 -6rem;/*откуда начинать трансформацию*/
-        bottom: -4.5rem;
-      }
-    }
+  &__neptune{
+    width: 10rem;
+    height: 10rem;
+    top: 42rem;
+    left: 7rem;
+    background-image: url("../img/hero/planets/neptune.jpg");
+  }
+
+  &__atlas{
+    width: 10rem;
+    height: 10rem;
+    top: 44rem;
+    left: 22rem;
+    background-image: url("../img/hero/planets/earth.jpg");
+  }
+
+
+  &__uranus{
+    width: 12rem;
+    height: 12rem;
+    top: 22rem;
+    right: 35rem;
+    background-image: url("../img/hero/planets/uranus.jpg");
+  }
+
+  &__mars{
+    width: 10rem;
+    height: 10rem;
+    top: 29rem;
+    right: 20rem;
+    background-image: url("../img/hero/planets/mars.jpg");
+  }
+
+  &__upiter{
+    width: 13rem;
+    height: 13rem;
+    top: 38rem;
+    right: 3rem;
+    background-image: url("../img/hero/planets/upiter.jpg");
+  }
+
+  &__venera{
+    width: 11rem;
+    height: 11rem;
+    top: 44rem;
+    right: 32rem;
+    background-image: url("../img/hero/planets/venera.jpg");
+  }
+
+  &__moon{
+    width: 28rem;
+    height: 28rem;
+    top: 56rem;
+    right: 6rem;
+    background-image: url("../img/hero/planets/moon.png");
   }
 
 
