@@ -28,7 +28,7 @@ if (hero){
             planeta.innerHTML = planeta.textContent.replace(/\S/g, "<span>$&</span>");
             const el = planeta.querySelectorAll('span');
             for(let i=0; i<el.length;i++){
-                el[el.length - i - 1].style.transform = "rotate("+(i - (el.length -1)/2) * 27+"deg)";
+                el[el.length - i - 1].style.transform = "rotate("+(i - (el.length -1)/2) * 18+"deg)";
             }
         })
     }
@@ -43,3 +43,25 @@ if (hero){
 // for(let i=0; i<element.length;i++){
 //     element[i].style.transform = "rotate("+(i - (element.length -1)/2) * 18+"deg)";
 // }
+
+
+// const upNode = document.getElementById('up');
+// const downNode = document.getElementById('down');
+//
+// const upTextArr = [...upNode.textContent.split('')];
+// const downTextArr = [...downNode.textContent.split('')];
+//
+// upNode.innerHTML = '';
+// downNode.innerHTML = '';
+//
+//
+// upTextArr.forEach((el, idx) => {
+//     console.log(idx)
+//     upNode.innerHTML += `<span style='transform: rotate(${idx * -15 + 85}deg);'>${upTextArr[upTextArr.length - idx - 1]}</span>`
+//
+//     // upNode.innerHTML += `<span style='transform: rotate(${  (idx+1) * -15 + upTextArr.length*15/2 }deg);'>${upTextArr[upTextArr.length - idx - 1]}</span>`
+// });
+//
+// downTextArr.forEach((el, idx) => {
+//   downNode.innerHTML += `<span style='transform: rotate(${idx * -15 + 55}deg);'>${el}</span>`
+// });

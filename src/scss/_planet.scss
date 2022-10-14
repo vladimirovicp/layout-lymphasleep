@@ -17,15 +17,20 @@
     &-up{
       color: #66c3d0;
       font-size: 2rem;
-      //font-weight: bold;
       position: absolute;/*абсолютное позиционирование*/
       pointer-events: none;/*не применять событие мыши*/
       left: 50%;
-      transform: translate(0, -50%);
+      width: 150%;
+      height: 80%;
+      transform: translate(-50%, -10%);
+
       & span{
         position: absolute;
         top: -2.5rem;
         display: inline-block;/*отображать как блочно-строчный*/
+        transform-origin: bottom;
+        height: 100%;
+        left: 50%;
       }
     }
 
@@ -35,12 +40,19 @@
       position: absolute;/*абсолютное позиционирование*/
       pointer-events: none;/*не применять событие мыши*/
       left: 50%;
-      transform: translate(0, -50%);
+      transform: translate(-50%, 10%);
+      width: 150%;
+      height: 80%;
       bottom: 0;
+
       & span{
         position: absolute;
         bottom: -2.5rem;
-        display: inline-block;/*отображать как блочно-строчный*/
+        transform-origin: top;
+        height: 80%;
+        left: 50%;
+        display: flex;
+        align-items: flex-end;
       }
     }
   }
@@ -57,13 +69,13 @@
 
     &_text-up{
       & span{
-        transform-origin: 0 8rem;/*откуда начинать трансформацию*/
+        //transform-origin: 0 8rem;/*откуда начинать трансформацию*/
       }
     }
 
     &_text-down{
       & span{
-        transform-origin: 0 -6rem;/*откуда начинать трансформацию*/
+        //transform-origin: 0 -6rem;/*откуда начинать трансформацию*/
       }
     }
   }
