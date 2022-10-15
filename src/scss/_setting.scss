@@ -22,3 +22,9 @@
     width: 50%;
   }
 }
+
+@media (max-width: 48em) {
+  .setting{
+    display: none;
+  }
+}

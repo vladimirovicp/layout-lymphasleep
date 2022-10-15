@@ -5,6 +5,7 @@
       box-shadow: inset .5rem .3rem 3rem 2rem rgba(0, 0, 0, 0.8), 0 .5rem 3rem .5rem #000;
       //margin: 4rem;
       position: absolute;
+      background-size: 25rem;
       transition-duration: 500ms;
       &:hover {
         bottom: 1rem;
@@ -70,7 +71,7 @@
     height: 10rem;
     left: 26rem;
     top: 22rem;
-    background-size: 25rem;
+    //background-size: 25rem;
     background-image: url(../img/hero/planets/mercury.jpg);
   }
 
@@ -114,6 +115,14 @@
     top: 44rem;
     left: 22rem;
     background-image: url("../img/hero/planets/earth.jpg");
+    &_text{
+      &-up{
+        height: 70%;
+      }
+      &-down{
+        height: 70%;
+      }
+    }
   }
 
 
@@ -123,6 +132,11 @@
     top: 22rem;
     right: 35rem;
     background-image: url("../img/hero/planets/uranus.jpg");
+      &_text{
+        &-up{
+          height: 70%;
+        }
+      }
   }
 
   &__mars{
@@ -131,6 +145,11 @@
     top: 29rem;
     right: 20rem;
     background-image: url("../img/hero/planets/mars.jpg");
+    &_text{
+      &-up{
+        height: 70%;
+      }
+    }
   }
 
   &__upiter{
@@ -155,6 +174,20 @@
     top: 56rem;
     right: 6rem;
     background-image: url("../img/hero/planets/moon.png");
+
+    &_text{
+      &-center{
+        font-size: 5rem;
+        color: #272929;
+        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
   }
 
 
@@ -177,5 +210,95 @@
   }
   100% {
     transform: translate(-50%, -50%) rotateX(70deg) rotateZ(360deg);
+  }
+}
+
+
+@media (max-width: 48em) {
+  .planet{
+    &__mercury{
+      width: 8rem;
+      height: 8rem;
+      left: 18rem;
+      top: 8rem;
+    }
+
+    &__saturn{
+      width: 9rem;
+      height: 9rem;
+      left: 6rem;
+      top: 20rem;
+    }
+
+    &__neptune{
+      width: 8rem;
+      height: 8rem;
+      top: 36rem;
+      left: 6rem;
+    }
+
+    &__atlas{
+      width: 7rem;
+      height: 7rem;
+      top: 68rem;
+      left: 7rem;
+    }
+
+
+    &__uranus{
+      width: 8rem;
+      height: 8rem;
+      top: 8rem;
+      right: 18rem;
+      &_text{
+        &-up{
+          height: 80%;
+        }
+      }
+    }
+
+    &__mars{
+      width: 9rem;
+      height: 9rem;
+      right: 6rem;
+      top: 20rem;
+    }
+
+    &__upiter{
+      width: 8rem;
+      height: 8rem;
+      top: 36rem;
+      right: 6rem;
+    }
+
+    &__venera{
+      width: 7rem;
+      height: 7rem;
+      top: 68rem;
+      right: 7rem;
+      &_text{
+        &-down{
+          height: 70%;
+        }
+      }
+    }
+
+    &__moon{
+      width: 16rem;
+      height: 16rem;
+      top: 66rem;
+      right: 50%;
+      transform: translate(50%,0);
+      &:hover{
+        transform: scale(1.25) translate(45%, 0);
+      }
+
+
+      &_text{
+        &-center{
+          font-size: 3rem;
+        }
+      }
+    }
   }
 }

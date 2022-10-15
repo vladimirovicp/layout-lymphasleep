@@ -7,15 +7,19 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
-const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
-const assetFilename = '[path][name][contenthash][ext]';
+// const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+const filename = (ext) => isDev ? `[name].${ext}` : `[name].${ext}`;
+// const assetFilename = '[path][name][contenthash][ext]';
+const assetFilename = '[path][name][ext]';
+
+const pathDirFile = isDev ? 'app' : 'dist';
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: './js/main.js', // Указываем входную точку
     output: { // Указываем точку выхода
-        path: path.resolve(__dirname, 'app'), // Тут мы указываем полный путь к директории, где будет храниться конечный файл
+        path: path.resolve(__dirname, pathDirFile), // Тут мы указываем полный путь к директории, где будет храниться конечный файл
         filename: `./js/${filename('js')}`, // Указываем имя этого файла
         // assetModuleFilename: '[path][name][ext]',
         assetModuleFilename: assetFilename,
