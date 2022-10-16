@@ -1,4 +1,4 @@
-.hero{
+.hero2{
   position: relative;
   height: 96rem;
 
@@ -20,21 +20,18 @@
   }
 
   &__title{
-    font-size: 8rem;
+    font-size: 0;
     position: absolute;
     width: 62rem;
     object-fit: contain;
     top: 72rem;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 1rem;
-    text-transform: uppercase;
   }
 }
 
 @media (max-width: 48em) {
-  .hero {
+  .hero2 {
     height: 93.7rem;
     &__bg {
       width: 100%;

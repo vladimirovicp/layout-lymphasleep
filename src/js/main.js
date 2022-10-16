@@ -9,6 +9,8 @@ import '../js/setting';
 
 
 
+// hero
+
 const hero = document.querySelector('.hero');
 if (hero){
     const planetaUp = hero.querySelectorAll('.planet__anima .planet__text-up');
@@ -32,8 +34,36 @@ if (hero){
             }
         })
     }
-
 }
+
+const hero2 = document.querySelector('.hero2');
+if (hero2){
+    const planetaUp2 = hero2.querySelectorAll('.planet2__anima .planet2__text-up');
+    if( planetaUp2.length > 0){
+        planetaUp2.forEach( planeta => {
+            planeta.innerHTML = planeta.textContent.replace(/\S/g, "<span>$&</span>");
+            const el = planeta.querySelectorAll('span');
+            for(let i=0; i<el.length;i++){
+                el[i].style.transform = "rotate("+(i - (el.length -1)/2) * 18+"deg)";
+            }
+        })
+    }
+
+    const planetaDown2 = hero2.querySelectorAll('.planet2__anima .planet2__text-down');
+    if( planetaDown2.length > 0){
+        planetaDown2.forEach( planeta => {
+            planeta.innerHTML = planeta.textContent.replace(/\S/g, "<span>$&</span>");
+            const el = planeta.querySelectorAll('span');
+            for(let i=0; i<el.length;i++){
+                el[el.length - i - 1].style.transform = "rotate("+(i - (el.length -1)/2) * 18+"deg)";
+            }
+        })
+    }
+}
+
+
+
+
 
 
 // const text = document.querySelector('.planet__mercury_text-up');

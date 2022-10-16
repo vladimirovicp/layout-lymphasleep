@@ -1,0 +1,11 @@
+@mixin borderAngle($width, $height) {
+  content: '';
+  position: absolute;
+  width: $width;
+  height: $height;
+  flex-shrink: 0;
+  background-image: url('../img/icons/border-angle.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
