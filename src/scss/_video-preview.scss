@@ -50,3 +50,13 @@
     }
   }
 }
+
+
+@media (max-width: 48em) {
+  .video-preview{
+    &__wrap{
+      width: 48rem;
+      height: 27rem;
+    }
+  }
+}

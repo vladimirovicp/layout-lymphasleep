@@ -3,7 +3,6 @@
       border-radius: 50%;
       animation: rotate 15s linear infinite;
       box-shadow: inset .5rem .3rem 3rem 2rem rgba(0, 0, 0, 0.8), 0 .5rem 3rem .5rem #000;
-      //margin: 4rem;
       position: absolute;
       background-size: 25rem;
       transition-duration: 500ms;
@@ -64,22 +63,19 @@
     }
   }
 
-  //https://celes.club/31732-tekstura-merkurija.html
-
   &__mercury{
-    width: 10rem;
-    height: 10rem;
-    left: 26rem;
-    top: 22rem;
-    //background-size: 25rem;
+    width: 13rem;
+    height: 13rem;
+    left: 24rem;
+    top: 5rem;
     background-image: url(../img/hero/planets/mercury.jpg);
   }
 
   &__saturn{
     width: 14rem;
     height: 14rem;
-    left: 2rem;
-    top: 25rem;
+    left: 7rem;
+    top: 16rem;
     background-size: 25rem;
     transform-style: preserve-3d;
     background-image: url(../img/hero/planets/saturn.jpg);
@@ -102,18 +98,18 @@
   }
 
   &__neptune{
-    width: 10rem;
-    height: 10rem;
-    top: 42rem;
-    left: 7rem;
+    width: 12rem;
+    height: 12rem;
+    top: 54rem;
+    left: 10rem;
     background-image: url("../img/hero/planets/neptune.jpg");
   }
 
   &__atlas{
     width: 10rem;
     height: 10rem;
-    top: 44rem;
-    left: 22rem;
+    top: 38rem;
+    left: 2rem;
     background-image: url("../img/hero/planets/earth.jpg");
     &_text{
       &-up{
@@ -129,8 +125,8 @@
   &__uranus{
     width: 12rem;
     height: 12rem;
-    top: 22rem;
-    right: 35rem;
+    top: 15rem;
+    right: 5rem;
     background-image: url("../img/hero/planets/uranus.jpg");
       &_text{
         &-up{
@@ -142,8 +138,8 @@
   &__mars{
     width: 10rem;
     height: 10rem;
-    top: 29rem;
-    right: 20rem;
+    top: 34rem;
+    right: 2rem;
     background-image: url("../img/hero/planets/mars.jpg");
     &_text{
       &-up{
@@ -155,29 +151,29 @@
   &__upiter{
     width: 13rem;
     height: 13rem;
-    top: 38rem;
-    right: 3rem;
+    top: 52rem;
+    right: 4rem;
     background-image: url("../img/hero/planets/upiter.jpg");
   }
 
   &__venera{
-    width: 11rem;
-    height: 11rem;
-    top: 44rem;
-    right: 32rem;
+    width: 13rem;
+    height: 13rem;
+    top: 5rem;
+    right: 26rem;
     background-image: url("../img/hero/planets/venera.jpg");
   }
 
   &__moon{
-    width: 28rem;
-    height: 28rem;
-    top: 56rem;
-    right: 6rem;
+    width: 20rem;
+    height: 20rem;
+    top: 58rem;
+    right: 20rem;
     background-image: url("../img/hero/planets/moon.png");
 
     &_text{
       &-center{
-        font-size: 5rem;
+        font-size: 3.5rem;
         color: #272929;
         text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
         height: 100%;
