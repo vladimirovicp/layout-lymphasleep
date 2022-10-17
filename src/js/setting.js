@@ -47,12 +47,12 @@ window.addEventListener('beforeunload', setLocalStorage);
 function getLocalStorage() {
     if (localStorage.getItem('heroBlock')) {
         heroBlock = localStorage.getItem('heroBlock');
-        heroTrue();
         heroSelectTrue(heroBlock);
     }
 }
 window.addEventListener('load', getLocalStorage);
 
+heroTrue();
 
 heroSelected.addEventListener("change", ()=>{
     let selectValue = heroSelected.value;

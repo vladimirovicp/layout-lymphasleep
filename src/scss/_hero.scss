@@ -1,6 +1,6 @@
 .hero{
   position: relative;
-  height: 96rem;
+  height: 85rem;
 
   .container{
     position: relative;
@@ -21,14 +21,13 @@
 
   &__title{
     font-size: 8rem;
+    line-height: 115%;
     position: absolute;
     width: 62rem;
     object-fit: contain;
-    top: 72rem;
+    top: 55rem;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 1rem;
     text-transform: uppercase;
   }
 }
@@ -47,10 +46,15 @@
         display: flex;
         height: 100%;
       }
+
+      img{
+        object-position: -12rem top;
+      }
     }
 
     &__title{
-      width: 40.4rem;
+      font-size: 6rem;
+      width: 60rem;
       top: 50rem;
       left: 50%;
     }
