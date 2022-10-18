@@ -19,6 +19,69 @@
     }
   }
 
+  &__play{
+    position: absolute;
+    top: 19rem;
+    left: 83.5rem;
+    &_link{
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      box-sizing: content-box;
+      display: block;
+      width: 3.2rem;
+      height: 4.4rem;
+      border-radius: 50%;
+      padding: 1.8rem 2.0rem 1.8rem 2.8rem;
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        background: #ba1f24;
+        border-radius: 50%;
+        animation: pulse-border 1500ms ease-out infinite;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        background: #fa183d;
+        border-radius: 50%;
+        transition: all 200ms;
+      }
+      &:hover:after {
+        background-color: darken(#fa183d, 10%);
+      }
+
+      span {
+        display: block;
+        position: relative;
+        z-index: 3;
+        width: 0;
+        height: 0;
+        border-left: 3.2rem solid #fff;
+        border-top: 2.2rem solid transparent;
+        border-bottom: 2.2rem solid transparent;
+      }
+    }
+
+  }
+
   &__title{
     font-size: 8rem;
     line-height: 115%;
@@ -29,6 +92,17 @@
     left: 50%;
     transform: translate(-50%, 0);
     text-transform: uppercase;
+  }
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    opacity: 0;
   }
 }
 
@@ -50,6 +124,11 @@
       img{
         object-position: -12rem top;
       }
+    }
+
+    &__play{
+      top: 30rem;
+      left: 40rem;
     }
 
     &__title{
