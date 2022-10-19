@@ -14,6 +14,8 @@ import $ from "jquery";
 window.$ = window.jQuery = $;
 import "magnific-popup";
 
+// import '../lib/magnific-popup/magnific-popup.css';
+
 // $('.test').html('вывод теста 2');
 
 
@@ -106,32 +108,32 @@ if (hero2){
 // });
 
 
-$(document).ready(function() {
-    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-
-        fixedContentPos: false
-    });
-});
-
-// $('.popup-youtube').magnificPopup({
-//     disableOn: 700,
-//     type: 'iframe',
-//     mainClass: 'mfp-fade',
-//     removalDelay: 160,
-//     preloader: false,
-//     fixedContentPos: false,
-//     iframe: {
-//         patterns: {
-//             youtube: {
-//                 index: 'youtube.com/',
-//                 id: 'v=',
-//                 src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0'
-//             }
-//         }
-//     },
+// $(document).ready(function() {
+//     $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+//         disableOn: 700,
+//         type: 'iframe',
+//         mainClass: 'mfp-fade',
+//         removalDelay: 160,
+//         preloader: false,
+//
+//         fixedContentPos: false
+//     });
 // });
+
+$('.popup-youtube').magnificPopup({
+    // disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false,
+    iframe: {
+        patterns: {
+            youtube: {
+                index: 'youtube.com/',
+                id: 'v=',
+                src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0'
+            }
+        }
+    },
+});
