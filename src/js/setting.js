@@ -35,29 +35,45 @@ const hero2 = main.querySelector('.hero2');
 let heroBlock = 'ver1';
 let heroSelected = setting.querySelector('.setting__hero-select');
 
-
+const videoPreview = main.querySelector('.video-preview');
+let videoPreviewBlock = 'выкл';
+let videoPreviewSelected = setting.querySelector('.setting__video-preview_select');
 
 // перед перезагрузкой или закрытием страницы (событие beforeunload) данные нужно сохранить
 function setLocalStorage() {
     localStorage.setItem('heroBlock', heroBlock);
+    localStorage.setItem('videoPreviewBlock', videoPreviewBlock);
 }
 window.addEventListener('beforeunload', setLocalStorage);
 
 // перед загрузкой страницы (событие load) данные нужно восстановить и отобразить
 function getLocalStorage() {
+
     if (localStorage.getItem('heroBlock')) {
         heroBlock = localStorage.getItem('heroBlock');
         heroSelectTrue(heroBlock);
     }
+    heroTrue(heroBlock);
+
+    if (localStorage.getItem('videoPreviewBlock')) {
+        videoPreviewBlock = localStorage.getItem('videoPreviewBlock');
+        videoPreviewSelectTrue(videoPreviewBlock);
+    }
+    videoPreviewTrue(videoPreviewBlock);
+
 }
 window.addEventListener('load', getLocalStorage);
 
-heroTrue();
 
 heroSelected.addEventListener("change", ()=>{
-    let selectValue = heroSelected.value;
-    heroSelectTrue(selectValue);
+    heroSelectTrue(heroSelected.value);
     heroTrue();
+});
+
+videoPreviewSelected.addEventListener("change", ()=>{
+    let selectValue = videoPreviewSelected.value;
+    videoPreviewSelectTrue(selectValue);
+    videoPreviewTrue(selectValue);
 });
 
 
@@ -74,12 +90,14 @@ function heroTrue(){
             heroBlock = 'ver2';
             break;
         default:
+            hero.style.display = "block";
+            hero2.style.display = "none";
+            heroBlock = 'ver1';
     }
 }
-
-function heroSelectTrue(selectValue){
+function heroSelectTrue(select){
     for(let i=0; i<heroSelected.options.length; i++){
-        if(heroSelected.options[i].value === selectValue ){
+        if(heroSelected.options[i].value === select ){
 
             heroSelected.options[i].selected = true;
             heroBlock = heroSelected.options[i].value;
@@ -88,6 +106,31 @@ function heroSelectTrue(selectValue){
         }
     }
 }
+
+function videoPreviewTrue(select){
+    switch (select) {
+        case 'вкл':
+            videoPreview.style.display = "block";
+            break;
+        case 'выкл':
+            videoPreview.style.display = "none";
+            break;
+        default:
+            videoPreview.style.display = "none";
+    }
+}
+function videoPreviewSelectTrue(select){
+    for(let i=0; i<videoPreviewSelected.options.length; i++){
+        if(videoPreviewSelected.options[i].value === select ){
+            videoPreviewSelected.options[i].selected = true;
+            videoPreviewBlock = videoPreviewSelected.options[i].value;
+        } else {
+            videoPreviewSelected.options[i].selected = false;
+        }
+    }
+}
+
+
 
 
 
