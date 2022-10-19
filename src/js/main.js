@@ -2,10 +2,19 @@
 
 // import CircleType from `circletype`;
 
+// import $ from "jQuery";
+
+
+
 import '../scss/main.scss';
 import '../index.html';
-
 import '../js/setting';
+
+import $ from "jquery";
+window.$ = window.jQuery = $;
+import "magnific-popup";
+
+// $('.test').html('вывод теста 2');
 
 
 
@@ -94,4 +103,35 @@ if (hero2){
 //
 // downTextArr.forEach((el, idx) => {
 //   downNode.innerHTML += `<span style='transform: rotate(${idx * -15 + 55}deg);'>${el}</span>`
+// });
+
+
+$(document).ready(function() {
+    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+    });
+});
+
+// $('.popup-youtube').magnificPopup({
+//     disableOn: 700,
+//     type: 'iframe',
+//     mainClass: 'mfp-fade',
+//     removalDelay: 160,
+//     preloader: false,
+//     fixedContentPos: false,
+//     iframe: {
+//         patterns: {
+//             youtube: {
+//                 index: 'youtube.com/',
+//                 id: 'v=',
+//                 src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0'
+//             }
+//         }
+//     },
 // });
