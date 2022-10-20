@@ -83,6 +83,16 @@
   }
 
   &__title{
+    position: absolute;
+    top: 16.5rem;
+    left: 42rem;
+    font-size: 3.8rem;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__laboratory-name{
     font-size: 8rem;
     line-height: 115%;
     position: absolute;
@@ -124,13 +134,58 @@
 }
 
 /* Бегущая строка*/
-
 @keyframes marquee{
   0%{transform: translate(0, 0);}
   100%{transform: translate(-100%, 0)}
 }
-
 /* End Бегущая строка*/
+
+
+/* Появление текста с движением*/
+
+.left-to-right{
+  animation-name: LeftToRight;
+  animation-duration: 1s;
+  //animation-delay: 1s;
+  display: block;
+  animation-timing-function: ease;
+}
+
+.right-to-left{
+  animation-name: RightToLeft;
+  animation-duration: 1s;
+  //animation-delay: 1s;
+  display: block;
+  animation-timing-function: ease;
+}
+
+@keyframes LeftToRight{
+  0%{
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80%{
+    transform: translateX(2rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes RightToLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80%{
+    transform: translateX(-2rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 @media (max-width: 48em) {
   .hero {
@@ -142,6 +197,7 @@
       &-desktop {
         display: none;
       }
+
       &-mobile{
         display: flex;
         height: 100%;
@@ -179,10 +235,23 @@
     }
 
     &__title{
+      display: none;
+      left: 17.5rem;
+      top: 28.8rem;
+      font-size: 2rem;
+    }
+
+    &__laboratory-name{
       font-size: 6rem;
       width: 60rem;
       top: 50rem;
       left: 50%;
+    }
+
+    &__marquee{
+      span{
+        font-size: 1.8rem;
+      }
     }
   }
 
