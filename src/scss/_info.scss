@@ -1,0 +1,35 @@
+.info{
+  padding: 7rem 0;
+  .container{
+    position: relative;
+  }
+  &__bg{
+    position: absolute;
+    width: 32.9rem;
+    height:46.4rem;
+    top: -10rem;
+    left: 0;
+  }
+
+  &__wrapper{
+    margin-left: 35rem;
+
+    ul{
+      li{
+        list-style: disc;
+        margin-left: 4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .info{
+    &__bg{
+      display: none;
+    }
+    &__wrapper{
+      margin-left: 0;
+    }
+  }
+}
