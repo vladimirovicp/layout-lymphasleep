@@ -8,7 +8,7 @@
 
 import '../scss/main.scss';
 import '../index.html';
-import '../js/setting';
+// import '../js/setting';
 
 import $ from "jquery";
 window.$ = window.jQuery = $;
