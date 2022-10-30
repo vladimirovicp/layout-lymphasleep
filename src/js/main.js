@@ -8,11 +8,14 @@
 
 import '../scss/main.scss';
 import '../index.html';
-import '../js/setting';
+// import '../js/setting';
 
 import $ from "jquery";
 window.$ = window.jQuery = $;
 import "magnific-popup";
+
+
+import "../js/swiper-setting";
 
 // import '../lib/magnific-popup/magnific-popup.css';
 

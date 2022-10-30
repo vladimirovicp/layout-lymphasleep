@@ -1,0 +1,138 @@
+.command-directions{
+  //padding-top: 7rem;
+  //padding-bottom: 7rem;
+  background-color: black;
+  position: relative;
+
+  .container{
+    position: relative;
+    z-index: 1;
+    padding-top: 2rem;
+  }
+
+  &__bg{
+    position: absolute;
+    width: 100%;
+    max-height: 66rem;
+    overflow: hidden;
+    &_media{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  img{
+    //margin:2rem;
+    //width: 156rem;
+    //height: 46rem;
+  }
+  &__swiper{
+    margin-top: 4rem;
+    width: 100%;
+    height: 50rem;
+    z-index: 2;
+  }
+
+  .swiper-slide-active{
+    .command-directions__slide_text{
+      &-head{
+        transform: translateX(0);
+
+        &:before{
+          transform: translateX(105%);
+        }
+      }
+      &-info{
+        transform: translateX(0);
+        &:before{
+          transform: translateX(-105%);
+        }
+      }
+    }
+  }
+
+  &__slide{
+    position: relative;
+    img{
+      width: 96%;
+      height: 96%;
+      margin: 0 2%;
+      padding: 2rem 0;
+    }
+    &_text{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      &-head{
+        position: absolute;
+        color: #000;
+        //margin-bottom: 1rem;
+        //height: 8.2rem;
+        //top: -0.5rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        font-size: 3.5em;
+        font-weight: bold;
+        padding: 2rem;
+        overflow: hidden;
+        transform: translateX(-105%);
+        transition: transform 0.3s ease-out 0.3s;
+
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: black;
+          transform: translateX(0);
+          transition: transform 0.3s ease-out .55s;
+        }
+      }
+      &-info{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 75%;
+        font-size: 2em;
+        padding: 1em;
+        color: white;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        transform: translateX(105%);
+        transition: transform 0.3s ease-out .3s;
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          transform: translateX(0);
+          transition: transform 0.3s ease-out .55s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .command-directions{
+    .title{
+      text-align: center;
+    }
+
+    &__slide{
+      &_text{
+        &-info{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,37 @@
+.soc{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 2.5rem;
+
+  &__item{
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child){
+      margin-right: 1rem;
+    }
+  }
+
+  &__link{
+    display: flex;
+
+  }
+
+  &__icon{
+    width: 1.8rem;
+    height: 1.2rem;
+    transition-duration: 500ms;
+    fill: #fff;
+    &:hover{
+      transform: scale(1.4);
+      fill:#a09fad;
+    }
+    &_telegram{
+      width: 1.3rem;
+      height: 1.2rem;
+    }
+  }
+
+
+}
