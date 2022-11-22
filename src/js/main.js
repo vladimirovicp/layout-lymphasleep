@@ -10,6 +10,8 @@ import '../scss/main.scss';
 import '../index.html';
 // import '../js/setting';
 
+import '../js/menu.js';
+
 import $ from "jquery";
 window.$ = window.jQuery = $;
 import "magnific-popup";
