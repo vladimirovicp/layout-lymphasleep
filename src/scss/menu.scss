@@ -8,9 +8,21 @@
     display: flex;
   }
   &__item{
+    position: relative;
     &:not(:last-child) {
       margin-right: 5.8rem;
     }
+
+    &:hover{
+       .menu__sub_list{
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+        pointer-events: all;
+      }
+    }
+
+
   }
 
   &__link{
@@ -39,6 +51,29 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
+  }
+
+  &__sub{
+    &_list{
+      clip-path: polygon(50% 0, 100% 2.5rem, 100% 100%, 0 100%, 0 0);
+      position: absolute;
+      //top: 4.2rem;
+      padding: 2rem 2rem 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      transform: translate(0, 10%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.3s ease 0s;
+    }
+    &-item{
+      margin-bottom: 1rem;
+    }
+    &-link{
+      color: white;
+      font-size: 1.4rem;
+      //margin-bottom: 2rem;
+    }
   }
 
 }
