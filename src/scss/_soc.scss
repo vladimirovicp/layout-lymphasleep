@@ -23,15 +23,41 @@
     height: 1.2rem;
     transition-duration: 500ms;
     fill: #fff;
-    &:hover{
-      transform: scale(1.4);
-      fill:#a09fad;
-    }
+
     &_telegram{
       width: 1.3rem;
       height: 1.2rem;
     }
   }
-
-
 }
+
+@media (max-width: 48em) {
+  .soc{
+    &__icon {
+      width: 3.6rem;
+      height: 2.4rem;
+      &_telegram{
+        width: 2.6rem;
+        height: 2.4rem;
+      }
+    }
+
+    &__item{
+      &:not(:last-child){
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .soc{
+    &__icon{
+      &:hover{
+        transform: scale(1.4);
+        fill:rgb(102, 195, 208)
+      }
+    }
+  }
+}
+

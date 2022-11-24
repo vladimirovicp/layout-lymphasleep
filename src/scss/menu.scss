@@ -1,32 +1,20 @@
 .menu{
   width: 100%;
+  display: flex;
   &__list{
     display: flex;
-    padding: 1rem 0 0 0;
+    padding: 0;
   }
   &__wrapper{
     display: flex;
+    margin-left: auto;
   }
   &__item{
     position: relative;
     &:not(:last-child) {
       margin-right: 2rem;
     }
-    &:hover{
-      .menu__sub_wrapper{
-        opacity: 1;
-        visibility: visible;
-        transform: translate(0, 0);
-        pointer-events: all;
-      }
-       .menu__sub_list{
-
-      }
-    }
-
-
   }
-
   &__link{
     color: #fff;
     font-size: 1.8rem;
@@ -34,14 +22,8 @@
     font-weight: 700;
     transition: color .5s;
 
-    &:hover{
-      color: #FE9013;
-    }
-
     &._active{
-      background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color:rgb(102, 195, 208);
     }
   }
   &__icon{
@@ -54,57 +36,57 @@
     font-size: 16px;
     line-height: 140%;
   }
-
-  &__sub{
-    &_wrapper{
-      position: absolute;
-      transform: translate(0, 10%);
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: all 0.3s ease 0s;
-    }
-    &_list{
-      padding: 2rem 2rem 1rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      margin-top: 2rem;
-
-    }
-    &-item{
-      margin-bottom: 1rem;
-    }
-    &-link{
-      color: white;
-      font-size: 1.6rem;
-    }
-  }
-
+  //&__sub{
+  //  &_wrapper{
+  //    position: absolute;
+  //    transform: translate(0, 10%);
+  //    opacity: 0;
+  //    visibility: hidden;
+  //    pointer-events: none;
+  //    transition: all 0.3s ease 0s;
+  //  }
+  //  &_list{
+  //    padding: 2rem 2rem 1rem;
+  //    background-color: rgba(0, 0, 0, 0.5);
+  //    margin-top: 2rem;
+  //  }
+  //  &-item{
+  //    margin-bottom: 1rem;
+  //  }
+  //  &-link{
+  //    color: white;
+  //    font-size: 1.6rem;
+  //    transition: color .5s;
+  //  }
+  //}
 }
 
 
-@media (max-width: 40em) { //640
+@media (max-width: 48em) {
   .menu {
     display: flex;
     &__list{
       flex-direction: column;
+      order: 1;
     }
-
     &__wrapper{
       position: fixed;
+      flex-direction: column;
+      margin-top: 6rem;
       padding-left: 2rem;
       padding-top: 6.8rem;
+      padding-right: 2rem;
       top: 0;
-      right: -100%;
-      //right: 0;
+      //right: -100%;
+      right: 0;
       width: 100%;
       height: 100%;
       transition: all 0.3s ease 0s;
       overflow: auto;
-      z-index: 10;
-      background-color: rgba(255,255,255,0.9);
+      z-index: 1000;
+      background-color: rgba(0,0,0,0.9);
 
     }
-
     &__icon {
       position: relative;
       width: 3.6rem;
@@ -152,7 +134,7 @@
 
       &.open{
         span{
-          background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+          background-color: rgb(102, 195, 208);
           &:nth-child(1){
             transform: rotate(45deg);
             top: .8rem;
@@ -167,20 +149,30 @@
         }
       }
     }
-
     &__link{
       font-size: 3.2rem;
-      color: #000;
+      color: #fff;
     }
-
     &__item{
       &:not(:last-child){
         margin: 0 0 3rem;
       }
     }
+
+    &__sub{
+      &_list{
+        padding-left: 2rem;
+        padding-bottom: 0;
+      }
+      &_wrapper{
+      }
+
+      &-link{
+        color: #fff;
+      }
+    }
   }
 }
-
 
 @media (max-width: 65em) {  //1040
   .menu{
@@ -191,4 +183,53 @@
     }
   }
 
+}
+
+@media (min-width: 48em) {
+  .menu{
+
+    &__item{
+      &:hover{
+        .menu__sub_wrapper{
+          opacity: 1;
+          visibility: visible;
+          transform: translate(0, 0);
+          pointer-events: all;
+        }
+      }
+    }
+
+    &__link{
+      &:hover{
+        color:rgb(102, 195, 208);
+      }
+    }
+
+    &__sub{
+      &_wrapper{
+        position: absolute;
+        transform: translate(0, 10%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease 0s;
+      }
+      &_list{
+        padding: 2rem 2rem 1rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 2rem;
+      }
+      &-item{
+        margin-bottom: 1rem;
+      }
+      &-link{
+        color: white;
+        font-size: 1.6rem;
+        transition: color .5s;
+        &:hover{
+          color:rgb(102, 195, 208);
+        }
+      }
+    }
+  }
 }
