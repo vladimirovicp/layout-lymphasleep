@@ -1,0 +1,55 @@
+.product {
+
+  &-animals{
+    &__title{
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      color: #FBFCFE;
+    }
+
+    &__wrap{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__color{
+      &-title{
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: #FBFCFE;
+        padding-bottom: 1rem;
+      }
+      &-info{
+        li{
+          margin-left: 2rem;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          color: #FBFCFE;
+        }
+        li:before{
+          content:  "—";
+          position: relative;
+          left:     -.5rem;
+        }
+      }
+    }
+
+    &__areas-use{
+      &-title{
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: #FBFCFE;
+        padding-bottom: 1rem;
+      }
+    }
+
+    &__chart{
+
+    }
+  }
+
+}
