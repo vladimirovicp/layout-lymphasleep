@@ -39,11 +39,16 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template:  path.resolve(__dirname, 'src/index.html'),
+            //template:  path.resolve(__dirname, 'src/lz.html'),
             filename: "index.html",
             minify: {
                 collapseWhitespace: isProd
             }
         }),
+        // new HTMLWebpackPlugin({
+        //     template:  'lz.html',
+        // }),
+
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: `./css/${filename('css')}`,

@@ -1,0 +1,235 @@
+.menu{
+  width: 100%;
+  display: flex;
+  &__list{
+    display: flex;
+    padding: 0;
+  }
+  &__wrapper{
+    display: flex;
+    margin-left: auto;
+  }
+  &__item{
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+  &__link{
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 140%;
+    font-weight: 700;
+    transition: color .5s;
+
+    &._active{
+      color:rgb(102, 195, 208);
+    }
+  }
+  &__icon{
+    display: none;
+  }
+  &__info{
+    margin-left: auto;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+  }
+  //&__sub{
+  //  &_wrapper{
+  //    position: absolute;
+  //    transform: translate(0, 10%);
+  //    opacity: 0;
+  //    visibility: hidden;
+  //    pointer-events: none;
+  //    transition: all 0.3s ease 0s;
+  //  }
+  //  &_list{
+  //    padding: 2rem 2rem 1rem;
+  //    background-color: rgba(0, 0, 0, 0.5);
+  //    margin-top: 2rem;
+  //  }
+  //  &-item{
+  //    margin-bottom: 1rem;
+  //  }
+  //  &-link{
+  //    color: white;
+  //    font-size: 1.6rem;
+  //    transition: color .5s;
+  //  }
+  //}
+}
+
+
+@media (max-width: 48em) {
+  .menu {
+    display: flex;
+    &__list{
+      flex-direction: column;
+      order: 1;
+    }
+    &__wrapper{
+      position: fixed;
+      flex-direction: column;
+      margin-top: 6rem;
+      padding-left: 2rem;
+      padding-top: 6.8rem;
+      padding-right: 2rem;
+      top: 0;
+      //right: -100%;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease 0s;
+      overflow: auto;
+      z-index: 1000;
+      background-color: rgba(0,0,0,0.9);
+
+    }
+    &__icon {
+      position: relative;
+      width: 3.6rem;
+      height: 2rem;
+      cursor: pointer;
+      display: inline-block;
+      margin-left: auto;
+      z-index: 15;
+      span{
+        position: absolute;
+        width: 100%;
+        height: .4rem;
+        background-color: #fff;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        transition-duration: 500ms;
+        &:nth-child(1){
+          top: 0;
+          left: 0;
+        }
+        &:nth-child(2){
+          top: .8rem;
+          left: 0;
+          opacity: 1;
+        }
+        &:nth-child(3){
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &:not(.open){
+        &:hover{
+          span{
+            &:nth-child(1){
+              transform: rotate(-3deg) scaleY(1.1);
+            }
+            &:nth-child(2){
+              transform: rotate(3deg) scaleY(1.1);
+            }
+            &:nth-child(3){
+              transform: rotate(-4deg) scaleY(1.1);
+            }
+          }
+        }
+      }
+
+      &.open{
+        span{
+          background-color: rgb(102, 195, 208);
+          &:nth-child(1){
+            transform: rotate(45deg);
+            top: .8rem;
+          }
+          &:nth-child(2){
+            opacity:0;
+          }
+          &:nth-child(3){
+            transform: rotate(-45deg);
+            top: .8rem;
+          }
+        }
+      }
+    }
+    &__link{
+      font-size: 3.2rem;
+      color: #fff;
+    }
+    &__item{
+      &:not(:last-child){
+        margin: 0 0 3rem;
+      }
+    }
+
+    &__sub{
+      &_list{
+        padding-left: 2rem;
+        padding-bottom: 0;
+      }
+      &_wrapper{
+      }
+
+      &-link{
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 65em) {  //1040
+  .menu{
+    &__item{
+      &:not(:last-child) {
+        margin-right: 4.8rem;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 48em) {
+  .menu{
+
+    &__item{
+      &:hover{
+        .menu__sub_wrapper{
+          opacity: 1;
+          visibility: visible;
+          transform: translate(0, 0);
+          pointer-events: all;
+        }
+      }
+    }
+
+    &__link{
+      &:hover{
+        color:rgb(102, 195, 208);
+      }
+    }
+
+    &__sub{
+      &_wrapper{
+        position: absolute;
+        transform: translate(0, 10%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease 0s;
+      }
+      &_list{
+        padding: 2rem 2rem 1rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-top: 2rem;
+      }
+      &-item{
+        margin-bottom: 1rem;
+      }
+      &-link{
+        color: white;
+        font-size: 1.6rem;
+        transition: color .5s;
+        &:hover{
+          color:rgb(102, 195, 208);
+        }
+      }
+    }
+  }
+}

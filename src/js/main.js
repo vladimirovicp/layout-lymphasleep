@@ -10,11 +10,11 @@ import '../scss/main.scss';
 import '../index.html';
 // import '../js/setting';
 
+import '../js/menu.js';
+
 import $ from "jquery";
 window.$ = window.jQuery = $;
 import "magnific-popup";
-
-
 import "../js/swiper-setting";
 
 // import '../lib/magnific-popup/magnific-popup.css';
@@ -123,20 +123,25 @@ if (hero2){
 //     });
 // });
 
-$('.popup-youtube').magnificPopup({
-    // disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: false,
-    iframe: {
-        patterns: {
-            youtube: {
-                index: 'youtube.com/',
-                id: 'v=',
-                src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0'
+const popupYoutube = document.querySelector('.popup-youtube');
+if (popupYoutube){
+    $('.popup-youtube').magnificPopup({
+        // disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        iframe: {
+            patterns: {
+                youtube: {
+                    index: 'youtube.com/',
+                    id: 'v=',
+                    src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0'
+                }
             }
-        }
-    },
-});
+        },
+    });
+}
+
+

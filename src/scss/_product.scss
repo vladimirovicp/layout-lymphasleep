@@ -1,0 +1,153 @@
+.product {
+
+  &-animals{
+    padding-top: 5rem;
+    &__title{
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 2.8;
+      color: #FBFCFE;
+    }
+
+    &__wrap{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__color{
+      &-title{
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.9;
+        color: #FBFCFE;
+        padding-bottom: 1rem;
+      }
+      &-info{
+        li{
+          margin-left: 2rem;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 2.1;
+          color: #FBFCFE;
+        }
+        li:before{
+          content:  "-";
+          position: relative;
+          left:     -.5rem;
+        }
+      }
+    }
+
+    &__areas-use{
+      &-title{
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.9;
+        color: #FBFCFE;
+        padding-bottom: 1rem;
+      }
+
+      li{
+        font-size: 1.8rem;
+        line-height: 2.1;
+        color: #FBFCFE;
+        margin-left: 2rem;
+        &:not(:last-child){
+          padding-bottom: .5rem;
+        }
+        &:before {
+          content:  "-";
+          position: relative;
+          left:     -.5rem;
+        }
+      }
+    }
+
+    &__chart{
+      width: 45.3rem;
+      height: 27rem;
+    }
+
+    &__text-price{
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1.9;
+      color: #FBFCFE;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+}
+
+@media (max-width: 48em) {
+  .product {
+
+    &-animals{
+      &__title{
+        font-size: 4.8rem;
+      }
+
+      &__wrap{
+        flex-direction: column;
+      }
+
+      &__color{
+        &-title{
+          font-size: 2.2rem;
+          padding-bottom: 1rem;
+          line-height: 1;
+        }
+        &-info{
+          li{
+            margin-left: 4rem;
+            font-size: 1.8rem;
+          }
+          li:before{
+            content:  "-";
+            position: relative;
+            left:     -1rem;
+          }
+        }
+      }
+
+      &__areas-use{
+        &-title{
+          font-size: 2.2rem;
+          color: #FBFCFE;
+          padding-bottom: 1rem;
+        }
+
+        li{
+          font-size: 1.8rem;
+          margin-left: 2rem;
+          &:not(:last-child){
+            padding-bottom: .5rem;
+          }
+          &:before {
+            content:  "-";
+            position: relative;
+            left:     -1rem;
+          }
+        }
+      }
+
+      &__chart{
+        margin: 0 auto 5rem;
+        width: 45.3rem;
+        height: 27rem;
+      }
+
+      &__text-price{
+        font-weight: 700;
+        font-size: 2.2rem;
+      }
+    }
+
+  }
+}
+
+@media (min-width: 48em) {
+  .product {
+
+  }
+}

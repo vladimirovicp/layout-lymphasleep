@@ -7,6 +7,7 @@
 
 @import "vendor";
 @import "set";
+@import "global";
 
 @import "popup";
 @import "setting";
@@ -15,6 +16,7 @@
 @import "title";
 
 @import "header";
+@import "menu";
 @import "footer";
 
 @import "hero";
@@ -26,4 +28,7 @@
 //@import "video-preview";
 
 @import "command-directions";
+
+@import "product";
+@import "component/cards";
 
