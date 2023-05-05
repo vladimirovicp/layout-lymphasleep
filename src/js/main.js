@@ -7,7 +7,10 @@
 
 
 import '../scss/main.scss';
-import '../index.html';
+
+import '../front.html';
+import '../atlas.html';
+import '../laboratornye-zhivotnye.html';
 // import '../js/setting';
 
 import '../js/menu.js';

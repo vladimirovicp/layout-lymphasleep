@@ -1,0 +1,22 @@
+.atlas{
+  display: flex;
+
+  &__video{
+    flex-grow: 1;
+    background-color: red;
+    height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    &-bg{
+
+    }
+  }
+
+  &__control{
+    background-color: green;
+    width: 40rem;
+  }
+
+}
