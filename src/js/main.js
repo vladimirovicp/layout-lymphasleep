@@ -20,6 +20,8 @@ window.$ = window.jQuery = $;
 import "magnific-popup";
 import "../js/swiper-setting";
 
+import "../js/atlas";
+
 // import '../lib/magnific-popup/magnific-popup.css';
 
 // $('.test').html('вывод теста 2');

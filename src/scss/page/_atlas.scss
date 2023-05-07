@@ -3,7 +3,7 @@
 
   &__video{
     flex-grow: 1;
-    background-color: red;
+    background-color: #b6b5b7;
     height: 90vh;
 
     display: flex;
@@ -14,9 +14,30 @@
     }
   }
 
-  &__control{
+  &-control{
     background-color: green;
-    width: 40rem;
+    width: 60rem;
+    padding: 1rem;
+
+    &__item{
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #3942af;
+
+    }
+
+    &__title{
+      color: #e1e1e1;
+      margin-bottom: 1rem;
+    }
+
+    &__btn:not(:first-child){
+      margin-left: 1rem;
+    }
+
+    &__buttons{
+
+    }
   }
 
 }
