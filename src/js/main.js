@@ -7,7 +7,10 @@
 
 
 import '../scss/main.scss';
-import '../index.html';
+
+import '../front.html';
+import '../atlas.html';
+import '../laboratornye-zhivotnye.html';
 // import '../js/setting';
 
 import '../js/menu.js';
@@ -16,6 +19,8 @@ import $ from "jquery";
 window.$ = window.jQuery = $;
 import "magnific-popup";
 import "../js/swiper-setting";
+
+import "../js/atlas";
 
 // import '../lib/magnific-popup/magnific-popup.css';
 

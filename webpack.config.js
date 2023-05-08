@@ -38,13 +38,33 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template:  path.resolve(__dirname, 'src/index.html'),
+            template:  path.resolve(__dirname, 'src/laboratornye-zhivotnye.html'),
             //template:  path.resolve(__dirname, 'src/lz.html'),
+            filename: "laboratornye-zhivotnye.html",
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template:  path.resolve(__dirname, 'src/front.html'),
+            filename: "front.html",
+            // filename: "index.html",
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+
+        new HTMLWebpackPlugin({
+            template:  path.resolve(__dirname, 'src/atlas.html'),
+            // filename: "atlas.html",
             filename: "index.html",
             minify: {
                 collapseWhitespace: isProd
             }
         }),
+
+
+
         // new HTMLWebpackPlugin({
         //     template:  'lz.html',
         // }),
