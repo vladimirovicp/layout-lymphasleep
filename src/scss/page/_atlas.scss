@@ -10,20 +10,35 @@
     align-items: center;
 
     &-bg{
+      margin: 0 auto;
 
+      video{
+        max-height: 88vh;
+      }
     }
   }
 
   &-control{
-    background-color: green;
+    background-color: #5561ed;
     width: 60rem;
     padding: 1rem;
+    height: 90vh;
+    //overflow: scroll;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #3942af;
+      border-radius: 1rem;
+    }
 
     &__item{
       padding: 1rem;
       margin-bottom: 1rem;
       background-color: #3942af;
-
     }
 
     &__title{
@@ -38,6 +53,85 @@
     &__buttons{
 
     }
+
+    &__btn{
+      width: 5rem;
+      height: 4.2rem;
+    }
+
   }
 
+  &-modal{
+    width: 60rem;
+
+    border: 0;
+    border-radius: 4px;
+    text-align: center;
+
+    display: block;
+    transform: scale(.2);
+    opacity: 0;
+    transition: all .4s linear;
+    visibility: hidden;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    margin: auto;
+
+    &[open]{
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+      &::backdrop{
+        animation: fade .4s linear forwards;
+      }
+    }
+
+    &::backdrop{
+      cursor: pointer;
+      background-color: #252525;
+      opacity: 0.9;
+    }
+
+    &__photo{
+        max-width: 100%;
+        height: auto;
+    }
+    &__video{
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+  }
+
+}
+
+
+
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: .8;
+  }
+}
+
+
+@media (max-width: 48em) {
+  .atlas{
+    flex-direction: column;
+
+    &__video{
+      height: auto;
+    }
+
+    &-control{
+      width: 100%;
+      height: auto;
+    }
+  }
 }
