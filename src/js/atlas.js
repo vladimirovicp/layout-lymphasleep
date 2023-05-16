@@ -3,20 +3,21 @@ const atlas = document.querySelector('.atlas')
 
 const dataAtlas = [
     {
-        'photo': "./img/no-photo-1920.jpg",
-        'text': "Representative images of the lumenized Lyve-1/Prox-1-expressing vessel with distinct walls composed of a single endothelial layer in coronal projection: (1 and 2) – the undulating shape in distal region of the lymphatic vessels, (3 and 4) – valve in the lymphatic vessel, (5-8) – the walls of lymphatic vessel and colocolization of Lyve1 with Prox1"
+        'photo': "https://lymphasleep.com/sites/default/files/atlas/img-1-text.jpg",
+        // 'photo': "./img/atlas/img-1-text.jpg",
+        // 'text': "Representative images of the lumenized Lyve-1/Prox-1-expressing vessel with distinct walls composed of a single endothelial layer in coronal projection: (1 and 2) – the undulating shape in distal region of the lymphatic vessels, (3 and 4) – valve in the lymphatic vessel, (5-8) – the walls of lymphatic vessel and colocolization of Lyve1 with Prox1"
     },
     {
-        'photo': "./img/no-photo-1920.jpg",
-        'text': "Lyve-1/Prox-1 expressing LVs in axial projection"
+        'photo': "https://lymphasleep.com/sites/default/files/atlas/img-2-text.jpg",
+        // 'text': "Lyve-1/Prox-1 expressing LVs in axial projection"
     },
     {
-        'photo': "./img/no-photo-1920.jpg",
-        'text': "Representative images of Lyve-1-expressing structures close to CD31-expressing capillary (a), venula (b) and arteriole (c). \n"
+        'photo': "https://lymphasleep.com/sites/default/files/atlas/img-3-text.jpg",
+        // 'text': "Representative images of Lyve-1-expressing structures close to CD31-expressing capillary (a), venula (b) and arteriole (c). \n"
     },
     {
-        'photo': "./img/no-photo-1920.jpg",
-        'text': ""
+        'photo': "https://lymphasleep.com/sites/default/files/atlas/img-4-text.jpg",
+        // 'text': ""
     }
 ];
 
@@ -90,14 +91,24 @@ if(atlas){
                     const content = document.createElement('div');
                     content.classList.add('atlas-modal__content');
 
-                    const textBlock = document.createElement('div');
-                    textBlock.classList.add('atlas-modal__text');
-                    textBlock.innerHTML = text;
 
-                    modalInner.innerHTML = ''
-                    modalInner.appendChild(content)
-                    content.appendChild(img)
-                    content.appendChild(textBlock)
+                    if(text === undefined) {
+                        modalInner.innerHTML = ''
+                        modalInner.appendChild(content)
+                        content.appendChild(img)
+                    } else {
+                        const textBlock = document.createElement('div');
+                        textBlock.classList.add('atlas-modal__text');
+                        textBlock.innerHTML = text;
+
+                        modalInner.innerHTML = ''
+                        modalInner.appendChild(content)
+                        content.appendChild(img)
+                        content.appendChild(textBlock)
+                    }
+
+
+
 
 
 
