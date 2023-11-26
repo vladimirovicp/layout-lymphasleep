@@ -31,6 +31,27 @@
           display: block;
         }
     }
+
+    &-potanin{
+      width: 35rem;
+      margin-right: 1rem;
+      align-items: flex-start;
+      display: flex;
+      //height: 100%;
+      img {
+        object-fit: contain;
+      }
+    }
+    &-rnf{
+      width: 35rem;
+      margin-right: 1rem;
+      align-items: flex-start;
+      display: flex;
+      //height: 100%;
+      img {
+        object-fit: contain;
+      }
+    }
   }
 
   &__grant{

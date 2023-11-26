@@ -47,21 +47,21 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             template:  path.resolve(__dirname, 'src/front.html'),
-            filename: "front.html",
-            // filename: "index.html",
-            minify: {
-                collapseWhitespace: isProd
-            }
-        }),
-
-        new HTMLWebpackPlugin({
-            template:  path.resolve(__dirname, 'src/atlas.html'),
-            // filename: "atlas.html",
+            // filename: "front.html",
             filename: "index.html",
             minify: {
                 collapseWhitespace: isProd
             }
         }),
+
+        // new HTMLWebpackPlugin({
+        //     template:  path.resolve(__dirname, 'src/atlas.html'),
+        //     // filename: "atlas.html",
+        //     filename: "index.html",
+        //     minify: {
+        //         collapseWhitespace: isProd
+        //     }
+        // }),
 
 
 

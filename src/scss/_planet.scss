@@ -186,7 +186,29 @@
     }
   }
 
+  &__sun{
+    width: 25rem;
+    height: 25rem;
+    top: 28rem;
+    right: 20rem;
+    background-image: url("../img/hero/planets/sun.jpg");
 
+    &_text{
+      &-center{
+        font-size: 3.5rem;
+        color: #272929;
+        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        text-align: center;
+      }
+    }
+  }
 }
 
 
@@ -280,6 +302,24 @@
     }
 
     &__moon{
+      width: 16rem;
+      height: 16rem;
+      top: 66rem;
+      right: 50%;
+      transform: translate(50%,0);
+      &:hover{
+        transform: scale(1.25) translate(45%, 0);
+      }
+
+
+      &_text{
+        &-center{
+          font-size: 3rem;
+        }
+      }
+    }
+
+    &__sun{
       width: 16rem;
       height: 16rem;
       top: 66rem;

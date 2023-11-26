@@ -1,5 +1,6 @@
 .atlas{
   display: flex;
+  margin-bottom: 2rem;
 
   &__video{
     flex-grow: 1;
@@ -45,16 +46,11 @@
     width: 60rem;
     padding: 1rem;
     height: 90vh;
-    overflow-y: auto;
+    //overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 
-    &::-webkit-scrollbar {
-      width: 1rem;
-    }
 
-    &::-webkit-scrollbar-thumb {
-      background-color: #3942af;
-      border-radius: 1rem;
-    }
 
     &__title{
       color: #e1e1e1;
@@ -82,6 +78,18 @@
       background-color: #fff;
       padding: 1rem;
       line-height: 1.4;
+      color: black;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 1rem;
+        background-color: #252525;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #3942af;
+        border-radius: 1rem;
+      }
     }
 
   }
