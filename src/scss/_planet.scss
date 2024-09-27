@@ -148,6 +148,20 @@
     }
   }
 
+  &__mars2 {
+    width: 10rem;
+    height: 10rem;
+    top: 38rem;
+    left: 25rem;
+    background-image: url("../img/hero/planets/mars2.jpg");
+
+    &_text {
+      &-up {
+        height: 70%;
+      }
+    }
+  }
+
   &__upiter{
     width: 13rem;
     height: 13rem;
