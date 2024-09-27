@@ -1,5 +1,5 @@
-import Swiper from 'swiper/swiper-bundle.esm.js';
-
+//import Swiper from 'swiper/swiper-bundle.esm.js';
+import Swiper from 'swiper';
 // https://codepen.io/emranweb/pen/wVaWNN  - анимация в слайдере
 
 const commandDirectionsSwiper = new Swiper('.command-directions__swiper', {
